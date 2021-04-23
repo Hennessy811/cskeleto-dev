@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tags",
+      "handler": "tags.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tags",
+      "handler": "tags.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tags",
+      "handler": "tags.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

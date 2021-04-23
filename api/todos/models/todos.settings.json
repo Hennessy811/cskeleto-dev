@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "todos",
   "info": {
-    "name": "todos"
+    "name": "todos",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,6 +20,32 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "deadlineDate": {
+      "type": "datetime"
+    },
+    "label": {
+      "type": "string"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "users_permissions_user": {
+      "columnName": "user",
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "todos"
     }
   }
 }
